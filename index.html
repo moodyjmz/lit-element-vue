@@ -13,6 +13,9 @@
   <first-element>{{ message }}</first-element>
 </div>
 <script>
+  Vue.config.ignoredElements = [
+    'first-element'
+  ];
   const app = new Vue({
     el: '#app',
     data: {
