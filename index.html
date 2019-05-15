@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script type="module">
+    import '/src/first-element.js';
+  </script>
+</head>
+<body>
+<div id="app">
+  <first-element>{{ message }}</first-element>
+</div>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Vue and litElement'
+    }
+  })
+</script>
+</body>
+</html>
