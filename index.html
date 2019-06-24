@@ -4,24 +4,49 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script type="module">
-    import '/src/first-element.js';
-  </script>
+
+
 </head>
 <body>
 <div id="app">
-  <first-element>{{ message }}</first-element>
+  <block-wrapper details="Simple litElement with vue var">
+    <first-element>{{ message }}</first-element>
+  </block-wrapper>
+  <block-wrapper details="LitElement, vue var, and attribute to modify LE styling">
+  <first-element uppercase>{{ message }}</first-element>
+  </block-wrapper>
+  <block-wrapper details="Vue component looping a LitElement and passing data via attr">
+    <looped-data v-bind:list="listTest"></looped-data>
+  </block-wrapper>
 </div>
-<script>
-  Vue.config.ignoredElements = [
-    'first-element'
+<script type="module">
+import '/src/lit-elements/first-element.js';
+import '/src/lit-elements/block-wrapper.js';
+import {LoopedData} from '/src/vue-elements/looped-data.js';
+var testData = [
+  {
+    message: 'I am groot'
+  },
+  {
+    message: 'hello'
+  }
+];
+Vue.config.ignoredElements = [
+    'first-element',
+    'block-wrapper'
   ];
   const app = new Vue({
     el: '#app',
-    data: {
-      message: 'Vue and litElement'
+    data: function() {
+      return {
+        message: 'Vue and litElement',
+        listTest: testData
+      };
+    },
+    components: {
+      'looped-data': LoopedData
     }
-  })
+  });
 </script>
 </body>
 </html>
