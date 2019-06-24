@@ -13,4 +13,4 @@ The lit-element is called `first-element`, and the vue app is called `app`.
 - `npm install`
 - `npx polymer serve`
 
-It uses polymer serve as the cli provides some nice mapping for node modules - although no bable etc is invoked
+It uses polymer serve as the cli provides some nice mapping for node modules - although no bable etc is invoked - next step would be to webpack this and serve via github
