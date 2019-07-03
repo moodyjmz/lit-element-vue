@@ -1,5 +1,5 @@
 // Import the LitElement base class and html helper function
-import { LitElement, html, css } from '/node_modules/@polymer/lit-element/lit-element.js';
+import { LitElement, html, css } from '../../node_modules/@polymer/lit-element/lit-element.js';
 
 // Extend the LitElement base class
 class FirstElement extends LitElement {

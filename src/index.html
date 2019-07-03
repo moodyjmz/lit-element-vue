@@ -19,34 +19,6 @@
     <looped-data v-bind:list="listTest"></looped-data>
   </block-wrapper>
 </div>
-<script type="module">
-import '/src/lit-elements/first-element.js';
-import '/src/lit-elements/block-wrapper.js';
-import {LoopedData} from '/src/vue-elements/looped-data.js';
-var testData = [
-  {
-    message: 'I am groot'
-  },
-  {
-    message: 'hello'
-  }
-];
-Vue.config.ignoredElements = [
-    'first-element',
-    'block-wrapper'
-  ];
-  const app = new Vue({
-    el: '#app',
-    data: function() {
-      return {
-        message: 'Vue and litElement',
-        listTest: testData
-      };
-    },
-    components: {
-      'looped-data': LoopedData
-    }
-  });
-</script>
+
 </body>
 </html>

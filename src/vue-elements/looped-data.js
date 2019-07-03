@@ -1,4 +1,4 @@
-import '/src/lit-elements/first-element.js';
+import '../lit-elements/first-element.js';
 
 export const LoopedData = {
   props: ['list'],
